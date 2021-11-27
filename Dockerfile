@@ -1,6 +1,7 @@
 FROM httpd:alpine as builder
 WORKDIR /root
 RUN apk add --no-cache git && \
+    git config --global init.defaultBranch main && \
     git clone --branch main --single-branch  https://github.com/KAR0218/KAR0218.github.io.git
 
 FROM httpd:alpine
