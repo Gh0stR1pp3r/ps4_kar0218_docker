@@ -1,6 +1,6 @@
 FROM httpd:alpine as builder
 WORKDIR /root
-RUN apk add --no-cache git && \
+RUN apk add --no-cache git bash openssh && \
     git clone https://github.com/KAR0218/KAR0218.github.io.git
 
 FROM httpd:alpine
